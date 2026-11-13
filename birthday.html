@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Kaye!</title>
+    <link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+    <canvas id="ribbons"></canvas>
+
+    <main class="page">
+        <!-- Ribbon banner -->
+        <header class="banner">
+            <div class="ribbon-banner">
+                <span>Happy 19th Birthday!</span>
+            </div>
+            <h1>Sexbomb, Kaye</h1>
+            <p class="date">November 14, 2026</p>
+            <p class="countdown" id="countdown"></p>
+			<p><b>From:</b> Your pinaka-oa na tropa - Jerine</p>
+        </header>
+
+        <!-- Message (left) + her photo (right) -->
+        <div class="hero-row">
+        <!-- Message card -->
+        <section class="card-section">
+            <div class="message-card" id="card">
+                <svg class="bow bow-card" viewBox="0 0 120 80" aria-hidden="true">
+                    <use href="#bow"></use>
+                </svg>
+
+                <!-- Locked -->
+                <div class="locked" id="locked">
+                    <h2>A message for you 💌</h2>
+                    <p>Enter the password to open your card</p>
+                    <form id="pwForm" autocomplete="off">
+                        <input type="password" id="pw" placeholder="Password" required>
+                        <button type="submit" class="btn">Open</button>
+                    </form>
+                    <p class="hint" id="hint"></p>
+                    <p class="error" id="error"></p>
+                </div>
+
+                <!-- Unlocked -->
+                <div class="unlocked" id="unlocked" hidden>
+                    <h2>Happy Birthday, Kaye! 🎂</h2>
+                    <div id="message"></div>
+                    <p class="sign" id="sign"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo -->
+        <section class="photo-section">
+            <div class="photo-frame" id="photoFrame">
+                <svg class="bow bow-top" viewBox="0 0 120 80" aria-hidden="true">
+                    <use href="#bow"></use>
+                </svg>
+                <img id="photo" src="kayespic.jpg" alt="Kaye Christine">
+            </div>
+        </section>
+        </div>
+        <!-- Photo compilation card -->
+        <section class="card-section">
+            <div class="media-card">
+                <svg class="bow bow-card" viewBox="0 0 120 80" aria-hidden="true">
+                    <use href="#bow"></use>
+                </svg>
+                <h2>Our Memories 📸</h2>
+                <button type="button" class="album-cover" id="albumOpen" aria-label="Open photo album">
+                    <img src="uscover.jpg" alt="Our picture">
+                    <span class="cover-tag" id="albumCount">Tap to open album</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Video greetings card -->
+        <section class="card-section">
+            <div class="media-card">
+                <svg class="bow bow-card" viewBox="0 0 120 80" aria-hidden="true">
+                    <use href="#bow"></use>
+                </svg>
+                <h2>Video Greetings sa Idol mo 🎬</h2>
+                <button type="button" class="album-cover video-card-cover" id="videoOpen" aria-label="Open video greeting">
+                    <img src="videocover.jpg" alt="Video greeting cover">
+                    <span class="play-btn">▶</span>
+                    <span class="cover-tag">Tap to open video</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Album popup -->
+    <div class="modal" id="modal" hidden>
+        <div class="modal-box">
+            <button type="button" class="close" id="closeModal" aria-label="Close">✕</button>
+            <h3>Our Memories 📸</h3>
+            <div class="grid" id="grid"></div>
+        </div>
+    </div>
+
+    <!-- Video popup -->
+    <div class="modal" id="videoModal" hidden>
+        <div class="modal-box video-box">
+            <button type="button" class="close" id="closeVideo" aria-label="Close">✕</button>
+            <h3>Video Greetings sa Idol mo🎬</h3>
+            <video id="greetVideo" src="video_20261113_173420.mp4" poster="videocover.jpg" controls playsinline preload="none"></video>
+        </div>
+    </div>
+
+    <!-- Big photo viewer -->
+    <div class="lightbox" id="lightbox" hidden>
+        <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
+        <button type="button" class="lb-nav" id="lbPrev" aria-label="Previous">‹</button>
+        <img id="lbImg" alt="Memory">
+        <video id="lbVideo" controls playsinline preload="metadata" hidden></video>
+        <button type="button" class="lb-nav" id="lbNext" aria-label="Next">›</button>
+    </div>
+
+    <!-- Reusable bow -->
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <linearGradient id="pinkGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#e8b7c2"/>
+                <stop offset="1" stop-color="#c65c6a"/>
+            </linearGradient>
+            <g id="bow">
+                <path d="M60 40 C30 0 5 5 8 38 C10 70 40 62 60 40Z" fill="url(#pinkGrad)" stroke="#670626" stroke-width="2"/>
+                <path d="M60 40 C90 0 115 5 112 38 C110 70 80 62 60 40Z" fill="url(#pinkGrad)" stroke="#670626" stroke-width="2"/>
+                <path d="M55 48 L38 78 L52 72 L58 60Z" fill="#da9ea6" stroke="#670626" stroke-width="2"/>
+                <path d="M65 48 L82 78 L68 72 L62 60Z" fill="#da9ea6" stroke="#670626" stroke-width="2"/>
+                <rect x="50" y="30" width="20" height="20" rx="8" fill="#a8404f" stroke="#670626" stroke-width="2"/>
+            </g>
+        </defs>
+    </svg>
+
+    <script src="birthday.js"></script>
+</body>
+</html>
