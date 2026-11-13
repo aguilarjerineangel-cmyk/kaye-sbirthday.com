@@ -276,12 +276,23 @@ function closeVideo() {
     greetVideo.pause();
     videoModal.hidden = true;
 }
+const VIDEO_PASSWORD = "kaye19na"; // <-- Change this to your video password
+
 document.getElementById("videoOpen").addEventListener("click", () => {
-    videoModal.hidden = false;
-    greetVideo.play().catch(() => {});   // if autoplay is blocked she can press play
+    const entered = prompt("Enter the secret password to watch your surprise video 🎬:");
+    if (entered === null) return; // she clicked Cancel
+
+    if (entered.trim().toLowerCase() === VIDEO_PASSWORD.toLowerCase()) {
+        videoModal.hidden = false;
+        greetVideo.play().catch(() => {});
+    } else {
+        alert("ops ops ops, mali po ate, pls try again 💔");
+    }
 });
 document.getElementById("closeVideo").addEventListener("click", closeVideo);
 videoModal.addEventListener("click", (e) => { if (e.target === videoModal) closeVideo(); });
 addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !videoModal.hidden) closeVideo();
 });
+
+
