@@ -159,7 +159,6 @@ const PHOTOS = [
     "images/63542315-236e-4630-9dbc-6b8e25ce988e.jpg",
     "images/65baa16e-bcf6-49eb-84c3-eb751e87c227.jpg",
     "images/8b026add-b3c0-4abe-a916-68c39a5fac1b.jpg",
-    "images/904353049_2350814022432886_5467616123509908011_n.jpg",
     "images/9bc9b564-1787-4b44-a53e-4d3eb792566e.jpg",
     "images/a0b58e70-25f8-48bc-b4ad-496cb6d38a5c.jpg",
     "images/af90c4a0-5b7b-470e-bc25-dbdf0199ebd7.jpg",
@@ -170,8 +169,6 @@ const PHOTOS = [
 const VIDEOS = [
     { src: "images/1.mp4", thumb: "images/thumbs/1.jpg" },
     { src: "images/2.mp4", thumb: "images/thumbs/2.jpg" },
-    { src: "images/3.mp4", thumb: "images/thumbs/3.jpg" },
-    { src: "images/4.mp4", thumb: "images/thumbs/4.jpg" },
     { src: "images/5.mp4", thumb: "images/thumbs/5.jpg" },
     { src: "images/6.mp4", thumb: "images/thumbs/6.jpg" }
 ];
