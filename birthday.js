@@ -160,7 +160,6 @@ const PHOTOS = [
     "images/65baa16e-bcf6-49eb-84c3-eb751e87c227.jpg",
     "images/8b026add-b3c0-4abe-a916-68c39a5fac1b.jpg",
     "images/9bc9b564-1787-4b44-a53e-4d3eb792566e.jpg",
-    "images/a0b58e70-25f8-48bc-b4ad-496cb6d38a5c.jpg",
     "images/af90c4a0-5b7b-470e-bc25-dbdf0199ebd7.jpg",
     "images/b0a97384-c812-471e-a7dc-7ff09b746a45.jpg"
 ];
